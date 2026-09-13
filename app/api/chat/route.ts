@@ -21,7 +21,7 @@ async function transformQuery(question: string, history: Message[]): Promise<str
     { role: 'user' as const, content: question },
   ]
 
-  const res = await groq.chat.completions.create({ model: 'llama-3.3-70b-versatile', messages, temperature: 0.2 })
+  const res = await groq.chat.completions.create({ model: 'openai/gpt-oss-120b', messages, temperature: 0.2 })
   return res.choices[0].message.content ?? question
 }
 
@@ -79,7 +79,7 @@ ${context || 'No specific context found — answer from general DSA knowledge.'}
     ]
 
     const response = await groq.chat.completions.create({
-      model: 'llama-3.3-70b-versatile',
+      model:  'openai/gpt-oss-120b',
       messages,
       temperature: 0.4,
       max_tokens: 1024,
