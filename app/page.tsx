@@ -198,7 +198,7 @@ export default function Home() {
             <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse-slow" />
             <span className="text-sm font-semibold text-[#e2e8f0]">DSA Expert Assistant</span>
             <span className="text-[10px] text-[#64748b] bg-[#1a2236] border border-[#1e2d45] rounded-full px-2 py-0.5">
-              llama-3.3-70b
+              openai/gpt-oss-120b
             </span>
           </div>
           <div className="flex items-center gap-2 text-[#64748b]">
